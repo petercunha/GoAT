@@ -23,7 +23,6 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"strings"
 	"time"
@@ -36,7 +35,7 @@ var (
 )
 
 func main() {
-	fmt.Println("GoAT Loaded.\n")
+	fmt.Println("GoAT Loaded.")
 
 	for true {
 		refresh()
@@ -45,8 +44,12 @@ func main() {
 }
 
 func refresh() {
-	fmt.Println("Refreshing...")
- 	lines := getContent()
+	fmt.Println("\nRefreshing...")
+
+	lines := getContent()
+ 	if lines == nil {
+ 		return
+ 	}
 
 	for i := 0; i < len(lines); i++ {
 		if strings.Contains(lines[i], "data-aria-label-part=\"0\">") {
@@ -58,19 +61,22 @@ func refresh() {
 			i = len(lines)
 		}
 	}
+	
 	fmt.Println("Refreshed. Sleeping for", int(slumber), "seconds")
  } 
 
-func getContent() ([]string) {
+func getContent() (lines []string) {
 	res, err := http.Get("https://twitter.com/" + commander)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("Bad connection! Sleeping for", int(slumber), "seconds")
+		return nil
 	}
 
 	content, err := ioutil.ReadAll(res.Body)
 	res.Body.Close()
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("Bad connection! Sleeping for", int(slumber), "seconds")
+		return nil
 	}
 
 	return strings.Split(string(content), "\n")
