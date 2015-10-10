@@ -1,6 +1,6 @@
 GoAT
 ===
-**Golang Advanced Trojan** v0.2 Pre-Alpha
+**Golang Advanced Trojan** v0.5 Beta
 
 This is a trojan made in Go, using Twitter as a the C&C server. 
 
@@ -22,7 +22,6 @@ While I keep teaching myself Go, I will be updating this project. If at anytime 
 
 ===
 ## TODO:
-* Persistence
 * Check for >1 running instance
 * Commands
   * DDoS
