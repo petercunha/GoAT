@@ -52,7 +52,6 @@ var (
 										- Actively monitor registry to prevent removal from start up
 										- Disable task manager and other system tools
 										- Protect GoAT's process from termination */
-	cmd string = ""					// Latest command
 )
 
 func main() {
