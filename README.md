@@ -2,7 +2,7 @@ GoAT
 ===
 **Golang Advanced Trojan** v0.5 Beta
 
-This is a trojan made in Go, using Twitter as a the C&C server. 
+GoAT is a trojan made in Go, using Twitter as a the C&C server. GoAT has some very unique and impressive capabilities, including multithreaded command execution and a sophisticated self defence rootkit module (written in C). If you're not familiar with malware, please do not run this program on yourself. It's very hard to remove once it is insalled.
 
 ===
 ### Commands
@@ -20,13 +20,18 @@ Compile with  ```go build -o GoAT.exe -ldflags "-H windowsgui" "C:\GoAT.go"```	t
 ### Under development
 While I keep teaching myself Go, I will be updating this project. If at anytime someone would like to add to the project they can. Just post in the 'issues' section and I will add your code and credits to the main project.
 
-===
-## TODO:
+### To do list
 * Check for >1 running instance
+* Rootkit: Prevent use and installation of antimalware/antivirus software
 * Commands
   * DDoS
   * Send messagebox
   * Uninstall
   * Shutdown/Restart
 
+===
 
+### Other stuff
+GoAT was inspired by SaturnsVoid's GoBot, which can be found here: https://github.com/SaturnsVoid/GoBot
+
+Go is a amazing and powerful programming language. If you already haven't, check it out; https://golang.org/
