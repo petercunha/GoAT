@@ -1,5 +1,5 @@
 /*	
-GoAT (Golang Advanced Trojan) -- Version 0.1 (UNDER CONSTRUCTION!)
+GoAT (Golang Advanced Trojan) -- Version 0.5 Beta
 	by Peter Cunha
 		http://petercunha.com
 		https://github.com/petercunha
