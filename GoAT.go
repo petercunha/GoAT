@@ -39,9 +39,9 @@ import (
 )
 
 var (
-	commander string = "GolangAT"	// Twitter account for Command & Control
+	commander string = "GolangAT"		// Twitter account for Command & Control
 	slumber time.Duration = 5		// Time to wait between checking for commands (in seconds)
-	cmd string = ""					// Stores latest command. Do not change this variable.
+	cmd string = ""				// Stores latest command. Do not change this variable.
 
 	// DO NOT ENABLE THE BELOW COMMANDS UNLESS YOU KNOW YOUR SHIT!
 
