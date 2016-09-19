@@ -1,5 +1,4 @@
 @echo off
 go build -o GoAT.exe -ldflags "-s -H windowsgui" GoAT.go
-echo Press any key to launch GoAT, or close the window.
+echo GoAT.exe has been built. Press any key to close the window...
 pause >nul
-GoAT.exe
