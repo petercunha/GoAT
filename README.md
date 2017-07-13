@@ -1,8 +1,10 @@
 GoAT
-===
+---
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/made-with-crayons.svg)](http://forthebadge.com)
+
 **Golang Advanced Trojan** is a trojan created in Go, using Twitter as a the C&C server. GoAT has some very unique and impressive capabilities, including multithreaded command execution and a sophisticated self defence rootkit module (written in C). If you're not familiar with malware, please do not run this program on yourself. It's very hard to remove once it is insalled.
 
-===
+---
 ### Commands
 ```!echo <message>``` - Logs message to slave console
 
@@ -27,7 +29,7 @@ While I keep teaching myself Go, I will be updating this project. If at anytime 
   * Uninstall
   * Shutdown/Restart
 
-===
+---
 
 ### Other stuff
 GoAT was inspired by SaturnsVoid's GoBot, which can be found here: https://github.com/SaturnsVoid/GoBot
